@@ -18,7 +18,7 @@
    </style>
 </head>
 <body>
-   <a href="/leads">Back to leads</a>
+   <a href="{% url 'leads:lead-list' %}">Back to leads</a>
    <hr>
    <h1>Leads Details</h1>
       <div class="lead">
@@ -27,8 +27,8 @@
          <p>Age: {{ lead.age }}</p>
          <p>Agent Assigned: {{ lead.agent}}</p>
          <hr>
-         <a href="/leads/{{ lead.id }}/update">Update</a>
-         <a href="/leads/{{ lead.id }}/delete">Delete</a>
+         <a href="{% url 'leads:lead-update' lead.pk %}">Update</a>
+         <a href="{% url 'leads:lead-delete' lead.pk %}">Delete</a>
       </div>
 </body>
 </html>

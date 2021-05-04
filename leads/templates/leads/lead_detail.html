@@ -22,9 +22,13 @@
    <hr>
    <h1>Leads Details</h1>
       <div class="lead">
+         <p>ID: {{ lead.id }}</p>
          <p>Name: {{ lead.first_name }} {{ lead.last_name }}</p>
          <p>Age: {{ lead.age }}</p>
          <p>Agent Assigned: {{ lead.agent}}</p>
+         <hr>
+         <a href="/leads/{{ lead.id }}/update">Update</a>
+         <a href="/leads/{{ lead.id }}/delete">Delete</a>
       </div>
 </body>
 </html>
